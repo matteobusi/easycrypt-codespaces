@@ -5,7 +5,7 @@
   // Students get a ~30s pull instead of a 5-10 min build.
   // To rebuild (e.g. after changing the Dockerfile), push to main — the
   // workflow will update the image automatically.
-  "image": "ghcr.io/matteobusi/easycrypt-codespaces:latest",
+  "image": "ghcr.io/matteobusi/easycrypt-devcontainer:latest",
 
   // Uncomment this block (and remove the "image" line above) for local Dockerfile builds:
   // "build": {

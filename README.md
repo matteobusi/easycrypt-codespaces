@@ -20,8 +20,8 @@ A ready-to-use development environment for EasyCrypt, designed for courses and w
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/matteobusi/easycrypt-codespaces.git
-   cd easycrypt-codespaces
+   git clone https://github.com/matteobusi/easycrypt-devcontainer.git
+   cd easycrypt-devcontainer
    ```
 2. Open the folder in VS Code:
    ```bash
