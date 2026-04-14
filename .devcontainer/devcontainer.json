@@ -1,9 +1,17 @@
 {
   "name": "EasyCrypt",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+
+  // Pre-built image published to GHCR by the devcontainer-build workflow.
+  // Students get a ~30s pull instead of a 5-10 min build.
+  // To rebuild (e.g. after changing the Dockerfile), push to main — the
+  // workflow will update the image automatically.
+  "image": "ghcr.io/matteobusi/easycrypt-codespaces:latest",
+
+  // Uncomment this block (and remove the "image" line above) for local Dockerfile builds:
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   "context": ".."
+  // },
 
   // Give the container enough resources for SMT solving
   "hostRequirements": {

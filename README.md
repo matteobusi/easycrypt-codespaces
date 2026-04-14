@@ -7,7 +7,7 @@ A ready-to-use development environment for EasyCrypt, designed for courses and w
 1. Click the green **Code** button at the top of this repository.
 2. Select the **Codespaces** tab.
 3. Click **Create codespace on main**.
-4. Wait ~5–10 minutes for the container to build (only on first launch; subsequent opens are instant).
+4. Wait ~30 seconds for the pre-built container image to be pulled (only on first launch; subsequent opens are instant).
 5. Open any `.ec` file in `examples/` and start proving.
 
 ### Interactive proof navigation
@@ -71,11 +71,11 @@ Both solvers are detected automatically by `easycrypt why3config`, which runs at
 
 ### Rebuilding the image
 
-If you change the Dockerfile, force a fresh build from within VS Code:
+The container image is pre-built and hosted on GitHub Container Registry (GHCR). It is rebuilt automatically by the `devcontainer-build` GitHub Actions workflow whenever you push a change to `.devcontainer/Dockerfile` or `.devcontainer/devcontainer.json` on `main`.
 
-> **Command Palette** → `Codespaces: Rebuild Container`
+To trigger a manual rebuild without a code change, go to **Actions → Build and publish devcontainer image → Run workflow**.
 
-Or from the Codespaces web UI: click the three-dot menu → **Rebuild**.
+Once the new image is pushed, the next Codespace created by any student will use it automatically.
 
 ## Useful resources
 
