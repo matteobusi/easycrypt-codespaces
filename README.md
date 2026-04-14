@@ -1,13 +1,35 @@
-# EasyCrypt — GitHub Codespaces Environment
+# EasyCrypt — Codespaces / Dev Container Environment
 
-A ready-to-use development environment for EasyCrypt, designed for courses and workshops. Students open it in GitHub Codespaces and get a fully configured EasyCrypt installation in their browser — no local setup required.
+A ready-to-use development environment for EasyCrypt, designed for courses and workshops. Students can use it in two ways — in the browser via GitHub Codespaces, or locally in VS Code with Docker. No manual EasyCrypt installation required either way.
 
 ## For students: getting started
+
+### Option A — GitHub Codespaces (browser, no local install)
 
 1. Click the green **Code** button at the top of this repository.
 2. Select the **Codespaces** tab.
 3. Click **Create codespace on main**.
 4. Wait ~30 seconds for the pre-built container image to be pulled (only on first launch; subsequent opens are instant).
+5. Open any `.ec` file in `examples/` and start proving.
+
+> **Note:** Codespaces runs on your personal GitHub account's free quota (120 compute-hours/month). Delete the codespace when you are done to avoid consuming storage quota.
+
+### Option B — Local VS Code with Docker (recommended for regular use)
+
+**Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) and the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) VS Code extension.
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/matteobusi/easycrypt-codespaces.git
+   cd easycrypt-codespaces
+   ```
+2. Open the folder in VS Code:
+   ```bash
+   code .
+   ```
+3. VS Code will detect the `.devcontainer` configuration and show a prompt — click **Reopen in Container**.
+   - If the prompt does not appear: open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Dev Containers: Reopen in Container**.
+4. The pre-built image is pulled from GHCR (~30 seconds). The EasyCrypt extension is installed automatically.
 5. Open any `.ec` file in `examples/` and start proving.
 
 ### Interactive proof navigation
