@@ -51,7 +51,12 @@
         },
 
         // Terminal: start in the workspace folder
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+
+        // Adapt to the OS light/dark preference automatically
+        "window.autoDetectColorScheme": true,
+        "workbench.preferredDarkColorTheme": "Default Dark Modern",
+        "workbench.preferredLightColorTheme": "Default Light Modern"
       }
     }
   },
