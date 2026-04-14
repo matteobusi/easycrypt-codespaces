@@ -40,17 +40,23 @@ A ready-to-use development environment for EasyCrypt, designed for courses and w
 
 The [EasyCrypt VS Code extension](https://marketplace.visualstudio.com/items?itemName=tornado.easycrypt-vscode) is pre-installed. It provides step-by-step proof navigation and a **Proof State** panel that shows the current goals — similar to ProofGeneral in Emacs.
 
+**Before stepping through a proof**, you must start the EasyCrypt process: open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **EasyCrypt: Start/Restart Process**. You need to do this once each time you open a new file.
+
 Open `examples/hello_easycrypt.ec` and use these keybindings:
 
-| Action | Linux / Windows | macOS |
-|---|---|---|
-| Step forward | `Ctrl+Alt+Down` | `Ctrl+Down` |
-| Step backward | `Ctrl+Alt+Up` | `Ctrl+Up` |
-| Go to cursor position | `Ctrl+Alt+Right` | `Ctrl+Right` |
-| Reset proof state | `Ctrl+Alt+Left` | `Ctrl+Left` |
-| Check whole file | `Ctrl+Shift+C` | `Cmd+Shift+C` |
+| Action | Keybinding |
+|---|---|
+| Step forward | `Alt+Down` |
+| Step backward | `Alt+Up` |
+| Go to cursor position | `Alt+Right` |
+| Reset proof state | `Alt+Left` |
+| Check whole file | `Ctrl+Shift+C` / `Cmd+Shift+C` |
 
-The **Proof State** panel (Explorer sidebar) shows goals and messages as you step through the proof. If it is not visible, open it via **View → Open View → Proof State**.
+The **Proof State** panel shows goals and messages as you step through the proof. By default it appears in the lower-left of the Explorer sidebar. If it is not visible, open it via **View → Open View → Proof State**. You can drag it to the right side of the editor if you prefer.
+
+**Troubleshooting:**
+- **No syntax highlighting?** Disable and re-enable the EasyCrypt extension: go to the Extensions sidebar, find "EasyCrypt", click the gear icon, and select **Disable**, then **Enable**. This is a known first-launch issue.
+- **Proof State panel not visible?** Open it via **View → Open View → Proof State**, then drag it to your preferred position — VS Code will remember it.
 
 ### Checking from the terminal
 

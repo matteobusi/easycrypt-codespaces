@@ -29,8 +29,8 @@
         // Point the extension at the EasyCrypt binary installed in the opam switch
         "easycrypt.executablePath": "/home/vscode/.opam/easycrypt/bin/easycrypt",
 
-        // Use ProofGeneral-compatible keybindings (familiar to EasyCrypt users)
-        "easycrypt.keybindings.profile": "proof-general",
+        // Use default keybindings: Alt+Down/Up/Right/Left
+        "easycrypt.keybindings.profile": "default",
 
         // Run a check on save (optional — disable if too slow for students)
         "easycrypt.diagnostics.onSave": true,
@@ -56,10 +56,7 @@
         // Adapt to the OS light/dark preference automatically
         "window.autoDetectColorScheme": true,
         "workbench.preferredDarkColorTheme": "Default Dark Modern",
-        "workbench.preferredLightColorTheme": "Default Light Modern",
-
-        // Use raw key codes so non-US keyboard layouts work correctly in the browser
-        "keyboard.dispatch": "keyCode"
+        "workbench.preferredLightColorTheme": "Default Light Modern"
       }
     }
   },
@@ -72,5 +69,5 @@
   // (e.g., if you install a new solver like CVC5):
   // "postCreateCommand": "eval $(opam env --switch=easycrypt) && easycrypt why3config"
 
-  "postStartCommand": "echo 'EasyCrypt environment ready. Open any .ec file and use Alt+Down / Alt+Up to step through proofs.'"
+  "postStartCommand": "echo 'EasyCrypt environment ready. Open any .ec file, run EasyCrypt: Start/Restart Process, then use Alt+Down / Alt+Up to step through proofs.'"
 }
