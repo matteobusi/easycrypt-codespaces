@@ -56,7 +56,10 @@
         // Adapt to the OS light/dark preference automatically
         "window.autoDetectColorScheme": true,
         "workbench.preferredDarkColorTheme": "Default Dark Modern",
-        "workbench.preferredLightColorTheme": "Default Light Modern"
+        "workbench.preferredLightColorTheme": "Default Light Modern",
+
+        // Use raw key codes so non-US keyboard layouts work correctly in the browser
+        "keyboard.dispatch": "keyCode"
       }
     }
   },
