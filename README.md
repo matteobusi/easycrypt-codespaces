@@ -1,10 +1,10 @@
-# EasyCrypt — Codespaces / Dev Container Environment
+# EasyCrypt: Codespaces/Dev Container Environment
 
-A ready-to-use development environment for EasyCrypt, designed for courses and workshops. Students can use it in two ways — in the browser via GitHub Codespaces, or locally in VS Code with Docker. No manual EasyCrypt installation required either way.
+A ready-to-use development environment for EasyCrypt, designed for courses and workshops. Students can use it in two ways: in the browser via GitHub Codespaces, or locally in VS Code with Docker. No manual EasyCrypt installation required either way.
 
 ## For students: getting started
 
-### Option A — GitHub Codespaces (browser, no local install)
+### Option A: GitHub Codespaces (browser, no local install)
 
 1. Click the green **Code** button at the top of this repository.
 2. Select the **Codespaces** tab.
@@ -18,7 +18,7 @@ A ready-to-use development environment for EasyCrypt, designed for courses and w
 >
 > To delete: go to [github.com/codespaces](https://github.com/codespaces), click `···` next to your codespace, and select **Delete**.
 
-### Option B — Local VS Code with Docker (recommended if you have VS Code and Docker installed)
+### Option B: Local VS Code with Docker (recommended if you have VS Code and Docker installed)
 
 **Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) and the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) VS Code extension.
 
