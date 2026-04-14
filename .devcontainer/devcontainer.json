@@ -1,0 +1,67 @@
+{
+  "name": "EasyCrypt",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  // Give the container enough resources for SMT solving
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "32gb"
+  },
+
+  // VS Code extensions installed automatically
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Interactive proof navigation: step forward/back, goals panel,
+        // ProofGeneral-style keybindings. Source: github.com/tornado80/easycrypt-vscode-ide
+        "tornado.easycrypt-vscode",
+
+        // Quality-of-life
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig"
+      ],
+      "settings": {
+        // Point the extension at the EasyCrypt binary installed in the opam switch
+        "easycrypt.executablePath": "/home/vscode/.opam/easycrypt/bin/easycrypt",
+
+        // Use ProofGeneral-compatible keybindings (familiar to EasyCrypt users)
+        "easycrypt.keybindings.profile": "proof-general",
+
+        // Run a check on save (optional — disable if too slow for students)
+        "easycrypt.diagnostics.onSave": true,
+        "easycrypt.diagnostics.onChange": false,
+
+        // Editor comfort settings
+        "editor.fontSize": 14,
+        "editor.rulers": [80],
+        "editor.wordWrap": "off",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "files.trimTrailingWhitespace": true,
+
+        // Associate .ec and .eca files with EasyCrypt
+        "files.associations": {
+          "*.ec": "easycrypt",
+          "*.eca": "easycrypt"
+        },
+
+        // Terminal: start in the workspace folder
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  // Run as the non-root user created in the Dockerfile
+  "remoteUser": "vscode",
+
+  // Post-create: nothing needed — why3config ran during image build.
+  // Uncomment the line below if you want to re-run it after creation
+  // (e.g., if you install a new solver like CVC5):
+  // "postCreateCommand": "eval $(opam env --switch=easycrypt) && easycrypt why3config"
+
+  "postStartCommand": "echo 'EasyCrypt environment ready. Open any .ec file and use Alt+Down / Alt+Up to step through proofs.'"
+}
