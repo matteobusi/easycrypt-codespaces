@@ -9,7 +9,7 @@ A ready-to-use development environment for EasyCrypt, designed for courses and w
 1. Click the green **Code** button at the top of this repository.
 2. Select the **Codespaces** tab.
 3. Click **Create codespace on main**.
-4. Wait ~30 seconds for the pre-built container image to be pulled (only on first launch; subsequent opens are instant).
+4. Wait until the pre-built container image to be pulled (only on first launch; subsequent opens should be quite fast).
 5. Open any `.ec` file in `examples/` and start proving.
 
 > 🚨 **Warning: delete your codespace when you are done.** 🚨 
@@ -33,7 +33,7 @@ A ready-to-use development environment for EasyCrypt, designed for courses and w
    ```
 3. VS Code will detect the `.devcontainer` configuration and show a prompt — click **Reopen in Container**.
    - If the prompt does not appear: open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run **Dev Containers: Reopen in Container**.
-4. The pre-built image is pulled from GHCR (~30 seconds). The EasyCrypt extension is installed automatically.
+4. The pre-built image is pulled from GHCR. The EasyCrypt extension is installed automatically.
 5. Open any `.ec` file in `examples/` and start proving.
 
 ### Interactive proof navigation
